@@ -1,0 +1,76 @@
+<!--========================JNHS BUNKASAI 2014=======================-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<!--=============================
+			BROWSER TITLING 
+		==============================-->
+			<link rel="icon" style="text/image" href="">
+		<title>
+			Cupertino JNHS Bunkasai - A student created, student led, festival &amp; fundraiser!
+		</title>
+		<!--=============================
+			Control Broswer's Scaling
+		===============================-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<!--=============================
+			CSS & JQuery/JS Links
+		==============================-->
+		<link rel="stylesheet" href="bunkasai2014.css"/>
+		<link rel="stylesheet" href="jquery.countdown.css"/>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="jquery.plugin.js"></script>
+		<script src="jquery.countdown.js"></script>
+		<!--=============================
+			COUNTDOWN SCRIPT
+		==============================-->
+		<script>
+			$(function () {
+				var austDay = new Date();
+				austDay = new Date(austDay.getFullYear() + 0, 12 - 10, 8);
+			$('#defaultCountdown').countdown({until: austDay});
+			$('#year').text(austDay.getFullYear());
+			});
+		</script>
+	</head>
+<body>
+	<main id="main">
+						<!--COUNTDOWN MARKUP -->
+						<div id="defaultCountdown"></div>
+						<!--END COUNTDOWN -->
+		<header>
+			<hgroup>
+				<h2 id="jnhs">JNHS</h2>
+				<h2 id="tino">Cupertino</h2>
+				<h1>Bunkasai</h1>
+			</hgroup>
+
+				<h4>Raising money for the victims of typhoon Haiyan</h4>
+						
+					<div id="whenwhere">
+						<h3>March 8th, 2014 2pm - 6pm</h3>
+						<h5>Cupertino High School</br> 10100 Finch Avenue</br> Cupertino CA</h5>
+					</div>		
+		</header>
+		<nav>
+			<div id="stickynav">
+				<ul>
+					<li><a href="#home">home</a></li>
+					<li><a href="#about">about</a></li>
+					<li><a href="#updates">updates</a></li>
+					<li><a href="#shedule">schedule</a></li>
+					<li><a href="#booths">booths</a></li>
+					<li><a href="#sponsors">sponsors</a></li>
+					<li><a href="#guests">guests</a></li>
+					<li><a href="#past">bunkasai 2011</a></li>
+					<li><a href="#links">links</a></li>
+					<li><a href="#maps">maps</a></li>
+				</ul>
+			</div><!--END STICKYNAV-->
+		</nav>
+
+	</main>
+</body>
+</html>
