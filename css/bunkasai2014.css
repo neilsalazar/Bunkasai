@@ -1,0 +1,488 @@
+/*##########################
+        CSS RESET
+##########################*/
+
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+html {
+    font-size: 16px;
+    font-family: 
+}
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+	display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+/*##########################
+        CSS RESET (end)
+##########################*/
+/*##########################
+        BORDER BOX
+##########################*/
+*, *:before, *:after {
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+ }
+/*#########################
+        FONT FAMILIES
+##########################*/
+@font-face {
+    font-family: JosefinSans-Lig; src: url(/fonts/JosefinSans-Light.ttf);
+}
+@font-face {
+    font-family: Lato-Reg; src: url(/fonts/Lato-Reg.otf);
+}
+/*#############################################################################
+###############################################################################
+                Mobile/Small Screen Style
+###############################################################################
+#############################################################################*/
+@media screen and (min-width: 300px) {
+    body {
+         border-top: 7px solid rgba(255, 201, 254, .75);
+    }
+    #main {
+        position: relative;
+        max-width: 300px;
+        margin: auto;
+        text-align: center;
+        -webkit-transition: .5s ease-in-out;
+        -moz-transition:  .5s ease-in-out;
+        -o-transition: .5s ease-in-out;
+        transition:  .5s ease-in-out;
+    }
+    header {
+        background-image: url(/images/sakurasun.png);
+        background-size: 35%;
+        background-repeat: no-repeat;
+        background-position: 50% 17%;
+        padding-top: 5rem;
+        font-family: JosefinSans-Lig;
+    }
+    #slidebutton {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        background: rgba(255, 201, 254, .95);
+        text-align: left;
+        padding: .5rem 1rem;
+        margin-top: -.5rem;
+        text-decoration: none;
+        color: #000;
+        font-family: JosefinSans-Lig;
+        -webkit-transition: .5s ease-in-out;
+        -moz-transition:  .5s ease-in-out;
+        -o-transition: .5s ease-in-out;
+        transition:  .5s ease-in-out;
+    }
+    hgroup {
+        text-align: center;
+        width: 96%;
+        text-transform: uppercase;
+        padding: 0 .5rem;
+        padding-top: 7rem;
+        margin: auto;
+    }
+    h1, h2 {
+        font-size: 3rem;
+        font-family: JosefinSans-Lig;
+    }
+    #jnhs {
+        font-size: 6.7rem;
+        letter-spacing: .78rem;
+        margin-left: -.55rem;
+        color: rgb(255, 201, 254);
+    }
+    #tino {
+        letter-spacing: .31rem;
+        padding-left: 0;
+        margin-left: -.71rem;
+        font-size: 2.9rem;  
+    }
+    #bunk {
+        font-size: 4.8rem;
+        letter-spacing: -.73rem;
+        padding-left: 0;
+        margin-left: -.85rem;
+        color: rgb(255, 201, 254);
+    }
+    h4 {
+        font-size: 1.25rem;
+        font-family: JosefinSans-Lig;
+        text-align: center;
+        padding: 0 1.5rem;
+    }
+    #whenwhere {      
+        margin-top: 3rem;
+        text-align: center;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    h5 {
+        line-height: 1.05rem;
+        margin-top: .5rem;
+        font-size: 1rem;
+    }
+    #defaultCountdown {
+        position: fixed;
+        margin-top: 1.5rem;
+        width: 100%;
+        max-width: 300px;
+        padding: .25rem 1rem;
+        border-bottom: 1px solid rgba(255, 201, 254, .75);
+        background: rgba(255, 255, 255, .95)
+    }
+    #slider {
+        background: rgba(255, 201, 254, .95);
+        border-right: 1px solid #fff;
+        position: fixed;
+        width: 60%;
+        top: 0;
+        height: 999px;
+        z-index: 2000;
+        -webkit-transition: .5s ease-in-out;
+        -moz-transition:  .5s ease-in-out;
+        -o-transition: .5s ease-in-out;
+        transition:  .5s ease-in-out;
+    }
+    #slider li {
+        position: relative;
+        font-family: JosefinSans-Lig;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #fff;
+        padding: 1rem;
+       
+    }
+    #slider a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #000;
+    }
+    p {
+        padding-top: 15rem;
+    }
+
+/*****************ABOUT SECTION*******************/
+    section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    #about {
+        background: #fff;
+        width: 100%;
+        text-align: center;
+    }
+    #about div {
+        font-family: JosefinSans-Lig;
+        border: 1px solid rgba(255, 201, 254, .75);
+        margin: 2rem auto;
+        background: #fff;
+        width: 90%;
+    }
+    #about h5 {
+        padding-top: 1.5rem;
+        padding-bottom: 2.5rem;
+    }
+    #student-run {
+        font-family: JosefinSans-Lig;
+    }
+    #about img {
+        width: 100%;
+    }
+}
+/*#############################################################################
+###############################################################################
+                DESKTOP/ENHANCED STYLES
+###############################################################################
+#############################################################################*/
+/************************************
+            min 600px
+************************************/
+@media screen and (min-width: 600px) {
+    #main {
+        min-width: 800px;
+        max-width: 900px;
+        padding: 0 1rem;
+    }
+    #slidebutton {
+        display: none;
+    }
+    #slider {
+        left: 0px !important;
+        margin: auto;
+    }
+    header {
+        background-size: 20%;
+        margin-top: 10rem;
+        background-position: 85.5% 75%;
+    }
+    hgroup {
+        margin-top: -3.1rem;
+        width: 50%;
+        padding-top: 0;
+        margin-left: 0;
+    }
+    #jnhs {
+        font-size: 7.7rem;
+        letter-spacing: 2.78rem;
+    }
+    #tino {
+        font-size: 4.3rem;
+        margin-left: -.7rem;
+        letter-spacing: .42rem;
+    }
+    #bunk {
+        margin-left: -1.3rem;
+        font-size: 6.6rem;
+        letter-spacing: -.77rem;
+    }
+    #tagline {
+        text-align: left;
+        padding-left: 0;
+    }
+    #slider {
+        background: none;
+        position: fixed;
+        margin-top: .5rem;
+        width: 100%;
+        height: 4rem;
+        z-index: 999;
+        background: rgba(255, 255, 255, .95);
+    }
+    #slider ul {
+        margin: auto;
+    }
+    #slider li {
+        
+        display: inline-block;
+        width: 16%;
+        text-align: center;
+        border-left: 1px solid rgba(255, 201, 254, 1);
+        padding: 1.25rem 0;
+    }
+    #slider li:first-child {
+        border-left: none;
+    }
+    #defaultCountdown {
+        position: relative;
+        float: right;
+        margin-top: 19rem;
+        width: 35%;
+        border: 2px solid rgba(255, 201, 254, .75);
+        border-radius: 5px;
+        margin-right: 2rem;
+    }
+    #whenwhere {
+        position: relative;
+        float: right;
+        width: 35%;
+        margin-top: -19.5rem;
+        text-align: center;
+        margin-right: 2rem;
+    }
+    /*****************ABOUT SECTION*******************/
+    #about {
+        padding: 7rem 1rem;
+    }
+    #about div {
+        max-width: 700px;
+        margin: 0;
+    }
+    #student-run {
+        margin: 1rem auto !important;
+    }
+    #behind {
+        max-width: 300px !important;
+        display: inline-block;
+        margin-right: 1rem !important;
+    }
+    #infront {
+        max-width: 300px !important;
+        display: inline-block;
+        margin-left: 1rem !important;
+    }
+}
+/************************************
+            min 1100px
+************************************/
+@media screen and (min-width: 1100px) {
+    header {
+        background-size: 27%;
+        margin-top: 12rem;
+        background-position: center;
+    }
+    #main {
+        min-width: 960px;
+        max-width: 1200px;
+    }
+    hgroup {
+        width: 33%;
+    }
+    #jnhs {
+        font-size: 6.7rem;
+        letter-spacing: 2.80rem;
+    }
+    #tino {
+        font-size: 3.8rem;
+        margin-left: -.75rem;
+        letter-spacing: .4335rem;
+    }
+    #bunk {
+        margin-left: -.95rem;
+        font-size: 6.1rem;
+        letter-spacing: -.77rem;
+    }    
+    #whenwhere {
+        position: relative;
+        float: right;
+        width: 33%;
+        margin-top: -17.5rem;
+        text-align: center;
+        padding-right: 1rem;
+    }
+    h3 {
+        font-size: 2rem;
+    }
+    #whenwhere h4 {
+        text-align: center;
+        padding-right: 0rem;
+    }
+    #defaultCountdown {
+        margin-top: 6rem;
+        margin-right: 5rem;
+    }
+    h5 {
+        clear: right;
+        line-height: 2rem;
+        margin-top: 7rem;
+        font-size: 1.5rem;
+    }
+/*****************ABOUT SECTION*******************/
+
+    #about div {
+        max-width: 800;
+        margin: 0;
+    }
+    #student-run {
+        margin: 1rem auto !important;
+        display: inline-block;
+    }
+    #behind {
+        position: absolute;
+        max-width: 200px !important;
+        display: inline-block;
+        right: auto !important;
+        margin-top: 1rem !important;
+    }
+    #infront {
+        clear: right;
+        max-width: 200px !important;
+        display: inline-block;
+        margin-left: .05rem !important;
+    }
+     #about h5 {
+        margin-top: 0;
+        padding-bottom: 2.5rem;
+        font-size: 1.25rem;
+    }
+
+
+
+

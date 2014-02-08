@@ -122,10 +122,10 @@ input, select {
         FONT FAMILIES
 ##########################*/
 @font-face {
-    font-family: JosefinSans-Lig; src: url(JosefinSans-Light.ttf);
+    font-family: JosefinSans-Lig; src: url(/fonts/JosefinSans-Light.ttf);
 }
 @font-face {
-    font-family: Lato-Reg; src: url(Lato-Reg.otf);
+    font-family: Lato-Reg; src: url(/fonts/Lato-Reg.otf);
 }
 /*#############################################################################
 ###############################################################################
