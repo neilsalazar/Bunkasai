@@ -39,11 +39,11 @@
 	</head>
 <body>
 	<div id="main" style="left:0px">
-		<a href="#" id="slidebutton">Menu</a>
+		<a href="javascript:void(0)" id="slidebutton">Menu</a>
 		<nav id="slider" style="left:-60%"  class="stickynav">
 			<div>
 				<ul>
-					<li><a href="#home">home</a></li>
+					<li><a href="#">home</a></li>
 					<li><a href="#about">about</a></li>
 					<li><a href="#shedule">schedule</a></li>
 					<li><a href="#booths">booths</a></li>
@@ -71,7 +71,7 @@
 						<h5>Cupertino High School</br> 10100 Finch Avenue</br> Cupertino CA</h5>
 					</div>		
 		</header>
-		
+			</div>
 		<section id="updates">
 			<!-- start slipsum code -->
 
@@ -83,16 +83,16 @@
 		</section>
 		<section id="about">
 			<div id="student-run">
-				<img src="/images/students1.jpg"/>
-				<h3>A festival run by students</h3>
+				<img src="/images/maid1.jpg"/>
+				<h5>A festival run by students</h5>
 			</div>
 			<div id="behind">
-				<img src="/images/hh1.jpg">
-				<h3>behind the scenes</h3>
+				<img src="/images/students1.jpg">
+				<h5>behind the scenes</h5>
 			</div>
 			<div id="infront">
-				<img src="/images/maid1jpg"/>
-				<h3>and in the scenes</h3>
+				<img src="/images/hh1.jpg"/>
+				<h5>and in the scenes</h5>
 			</div>
 		</section>
 		<section id="schedule">
@@ -153,21 +153,31 @@
 <!-- end slipsum code -->
 </section>
 
-	</div>
+
 
 
 	<script>
 	var slider = document.getElementById('slider');
 	var button = document.getElementById('slidebutton');
 	var slide = document.getElementById('main');
+	var anywhere = document.getElementsByTagName('body');
 
 	button.onclick = function() {
 		if(slider.style.left == "-60%" && slide.style.left == "0px") {
 			slider.style.left = "0px";
 			slide.style.left = "60%";
+			button.style.left = "60%";
+
 		} else {
 			slider.style.left = "-60%";
 			slide.style.left = "0px";
+			button.style.left = "0px"
+
+		}
+	};
+	anywhere.onclick = function() {
+		if(slider.style.left !== "-60%") {
+			slider.style.left = "-60%";
 		}
 	};
 	</script>
