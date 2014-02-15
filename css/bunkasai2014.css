@@ -63,19 +63,24 @@ a {
     font-size:100%;
     vertical-align:baseline;
     background:transparent;
+    color: #4d4d4d;
+    text-decoration: none;
+}
+a:hover {
+    color: rgba(255, 201, 254, 1);
 }
 
 /* change colours to suit your needs */
 ins {
     background-color:#ff9;
-    color:#000;
+    color:#4d4d4d;
     text-decoration:none;
 }
 
 /* change colours to suit your needs */
 mark {
     background-color:#ff9;
-    color:#000; 
+    color:#4d4d4d; 
     font-style:italic;
     font-weight:bold;
 }
@@ -127,12 +132,21 @@ input, select {
 @font-face {
     font-family: Lato-Reg; src: url(/fonts/Lato-Reg.otf);
 }
+@font-face {
+    font-family: AshburyLig; src: url(/fonts/AshburyLig-webfont.ttf);
+}
+@font-face {
+    font-family: SofiaPL; src: url(/fonts/SofiaProLight-webfont.ttf);
+}
 /*#############################################################################
 ###############################################################################
                 Mobile/Small Screen Style
 ###############################################################################
 #############################################################################*/
-@media screen and (min-width: 300px) {
+    html {
+    font-family: SofiaPL;
+    }
+    @media screen and (min-width: 300px) {
     body {
          border-top: 7px solid rgba(255, 201, 254, .75);
     }
@@ -163,7 +177,7 @@ input, select {
         padding: .5rem 1rem;
         margin-top: -.5rem;
         text-decoration: none;
-        color: #000;
+        color: #4d4d4d;
         font-family: JosefinSans-Lig;
         -webkit-transition: .5s ease-in-out;
         -moz-transition:  .5s ease-in-out;
@@ -192,7 +206,8 @@ input, select {
         letter-spacing: .31rem;
         padding-left: 0;
         margin-left: -.71rem;
-        font-size: 2.9rem;  
+        font-size: 2.9rem;
+        color: #4d4d4d;  
     }
     #bunk {
         font-size: 4.8rem;
@@ -218,6 +233,17 @@ input, select {
         line-height: 1.05rem;
         margin-top: .5rem;
         font-size: 1rem;
+    }
+    #free {
+        border: solid #242424 1px;
+        border-radius: 3px;
+        background: #242424;
+        margin: auto;
+        margin-top: .25rem;
+        color: rgba(255, 201, 254, .95);
+        padding: .25rem;
+        width: 70%;
+        vertical-align: middle;
     }
     #defaultCountdown {
         position: fixed;
@@ -253,40 +279,119 @@ input, select {
     #slider a {
         text-decoration: none;
         text-transform: uppercase;
-        color: #000;
+        color: #4d4d4d;
+    } 
+    section p {
+        padding: 0 1rem;
+        line-height: 1.35rem;
+        text-align: justify;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
     }
-    p {
-        padding-top: 15rem;
+    section h3, section h4 {
+        text-align: left;
+        font-family: Lato-Reg;
+        font-weight: thin;
+        padding-left: 1rem;
+        
     }
-
+    section h4 {
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+    section h3 {
+        font-size: 1.25rem;
+        padding-bottom: .25rem;
+    }
+    .news {
+        border: solid 2px rgba(255, 201, 254, .75);
+        border-radius: 5px;
+        padding: .5rem .25rem;
+        margin-top: .25rem;
+    }
 /*****************ABOUT SECTION*******************/
     section {
-        padding-top: 3rem;
+        padding: 0 .25rem;
+        padding-top: 5rem;
         padding-bottom: 3rem;
     }
     #about {
         background: #fff;
         width: 100%;
-        text-align: center;
+        text-align: justify;
     }
     #about div {
-        font-family: JosefinSans-Lig;
-        border: 1px solid rgba(255, 201, 254, .75);
+        text-align: center;
+        font-family: AshburyLig;
+        border-radius: 5px;
+        box-shadow: 2px 2px 3px #777;
         margin: 2rem auto;
         background: #fff;
         width: 90%;
+        padding-bottom: .25rem;
     }
-    #about h5 {
-        padding-top: 1.5rem;
-        padding-bottom: 2.5rem;
+    #about h4 {
+        padding-top: 5rem;
+        padding-bottom: .5rem;
+        padding-left: 1rem;
     }
-    #student-run {
-        font-family: JosefinSans-Lig;
+    #about h4:first-child {
+        padding-top: 0rem;
     }
     #about img {
         width: 100%;
     }
+/***************************SCHEDULE**************************/
+#schedule {
+    height: 50rem;
 }
+#schedule h4:first-child {
+    padding-top: 7rem;
+}
+/************************BOOTHS**************************/
+.disclaimer {
+    font-size: .75rem;
+    display: inline;
+    padding-left: 1rem;
+}
+#booths h4:first-child {
+    padding-top: 3rem;
+}
+/************************SPONSORS**************************/
+#sponsors {
+    height: 50rem;
+}
+#sponsors h4:first-child {
+    padding-top: 7rem;
+}
+/************************LINKS**************************/
+#links {
+    height: 50rem;
+}
+#links h4:first-child {
+    padding-top: 4rem;
+    line-height: 1.25rem;
+}
+#links h4 {
+    padding-top: 3rem;
+    padding-bottom: .75rem;
+}
+#links ul {
+    list-style: none;
+    padding-left: 1rem;
+}
+#links ul li {
+    line-height: 1.25rem;
+}
+/**************FOOTER***************/
+footer {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: .75rem;
+}
+
 /*#############################################################################
 ###############################################################################
                 DESKTOP/ENHANCED STYLES
@@ -298,7 +403,7 @@ input, select {
 @media screen and (min-width: 600px) {
     #main {
         min-width: 800px;
-        max-width: 900px;
+        max-width: 1000px;
         padding: 0 1rem;
     }
     #slidebutton {
@@ -309,9 +414,10 @@ input, select {
         margin: auto;
     }
     header {
-        background-size: 20%;
+        background-size: 13%;
         margin-top: 10rem;
-        background-position: 85.5% 75%;
+        background-position: 83.5% 75%;
+        margin-bottom: 5rem;
     }
     hgroup {
         margin-top: -3.1rem;
@@ -367,7 +473,7 @@ input, select {
         width: 35%;
         border: 2px solid rgba(255, 201, 254, .75);
         border-radius: 5px;
-        margin-right: 2rem;
+        margin-right: 3.5rem;
     }
     #whenwhere {
         position: relative;
@@ -377,13 +483,26 @@ input, select {
         text-align: center;
         margin-right: 2rem;
     }
-    /*****************ABOUT SECTION*******************/
+    section {
+        padding: 0 1rem;
+        padding-top: 5rem;
+    }
+    #maincontent {
+        min-width: 600px;
+        max-width: 700px;
+        margin: auto;
+
+    }
+/*****************ABOUT SECTION*******************/
     #about {
         padding: 7rem 1rem;
     }
     #about div {
         max-width: 700px;
         margin: 0;
+    }
+    #about h3 {
+        padding-bottom: .25rem;
     }
     #student-run {
         margin: 1rem auto !important;
@@ -392,11 +511,21 @@ input, select {
         max-width: 300px !important;
         display: inline-block;
         margin-right: 1rem !important;
+        margin-left: 1rem !important;
     }
     #infront {
         max-width: 300px !important;
         display: inline-block;
         margin-left: 1rem !important;
+    }
+/*****************BOOTHS SECTION*******************/
+    .disclaimer {
+        display: inline-block;
+        padding-left: 0;
+    }
+    #booths h3:first-child {
+        display: inline-block;
+        padding-top: 3rem;
     }
 }
 /************************************
@@ -444,42 +573,41 @@ input, select {
         text-align: center;
         padding-right: 0rem;
     }
+    #free {
+        margin: .5rem auto;
+        width: 50%;
+    }
     #defaultCountdown {
-        margin-top: 6rem;
+        margin-top: 9rem;
         margin-right: 5rem;
     }
     h5 {
         clear: right;
         line-height: 2rem;
-        margin-top: 7rem;
+        margin-top: 6rem;
         font-size: 1.5rem;
+    }
+    #updates {
+        margin-left: 1rem;
     }
 /*****************ABOUT SECTION*******************/
 
     #about div {
         max-width: 800;
         margin: 0;
+        overflow: none;
     }
     #student-run {
         margin: 1rem auto !important;
-        display: inline-block;
     }
     #behind {
-        position: absolute;
-        max-width: 200px !important;
-        display: inline-block;
-        right: auto !important;
-        margin-top: 1rem !important;
+        margin-left: 0rem;
     }
     #infront {
-        clear: right;
-        max-width: 200px !important;
-        display: inline-block;
-        margin-left: .05rem !important;
+      
     }
-     #about h5 {
+    #about h5 {
         margin-top: 0;
-        padding-bottom: 2.5rem;
         font-size: 1.25rem;
     }
 
