@@ -1,13 +1,14 @@
+<!DOCTYPE html>
 <!--========================JNHS BUNKASAI 2014=======================-->
 
-<!DOCTYPE html>
+
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<!--=============================
 			BROWSER TITLING 
 		==============================-->
-			<link rel="icon" style="text/image" href="">
+			<link rel="icon" style="text/image" href="images/sakurasun.ico">
 		<title>
 			Cupertino JNHS Bunkasai - A student created, student led, festival &amp; fundraiser!
 		</title>
@@ -20,40 +21,73 @@
 		==============================-->
 		<link rel="stylesheet" href="/css/bunkasai2014.css"/>
 		<link rel="stylesheet" href="/css/jquery.countdown.css"/>
+		
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="/scripts/jquery.plugin.js"></script>
 		<script src="/scripts/jquery.countdown.js"></script>
 
-		
+
 		<!--=============================
 			COUNTDOWN SCRIPT
 		==============================-->
 		<script>
+		var austDay = new Date();
 			$(function () {
-				var austDay = new Date();
-				austDay = new Date(austDay.getFullYear() + 0, 12 - 10, 8);
+				
+				austDay = new Date(austDay.getFullYear() + 0, 12 - 10, 8, 24-10);
 			$('#defaultCountdown').countdown({until: austDay});
-			$('#year').text(austDay.getFullYear());
+			/*$('#year').text(austDay.getFullYear());*/
+			});	
+		</script>
+
+		<!--============================
+			JQUERY LINK SCROLL
+		==============================-->
+		<script>  $(function(){
+			    $("a.js_onPageLink").bind("click", function (event) {
+			        event.preventDefault ? event.preventDefault() : event.returnValue = false;
+			        var target = $(this).attr("href");
+			        $("html, body").stop().animate({
+			                scrollLeft: $(target).offset().left,
+			                scrollTop: $(target).offset().top
+			            }, 1200);
+			    });
+			});</script>
+					
+					<script type="text/javascript">
+						$(function(){
+			    $("a.js_onPageLink").bind("click", function (event) {
+			        event.preventDefault ? event.preventDefault() : event.returnValue = false;
+			        var target = $(this).attr("href");
+			        $("html, body").stop().animate({
+			                scrollLeft: $(target).offset().left,
+			                scrollTop: $(target).offset().top
+			            }, 1200);
+			    });
 			});
 		</script>
+		
 	</head>
-<body>
+
+
+<body id="top">
 	<div id="main" style="left:0px">
 		<a href="javascript:void(0)" id="slidebutton">Menu</a>
 		<nav id="slider" style="left:-60%"  class="stickynav">
 			<div>
 				<ul>
-					<li><a href="#">home</a></li>
-					<li><a href="#about">about</a></li>
-					<li><a href="#schedule">schedule</a></li>
-					<li><a href="#booths">booths</a></li>
-					<li><a href="#sponsors">sponsors</a></li>
-					<li><a href="#links">links</a></li>
+					<li><a href="#top" class="js_onPageLink">home</a></li>
+					<li><a href="#updates" class="js_onPageLink">Newsfeed</a></li>
+					<li><a href="#about" class="js_onPageLink">about</a></li>
+					<li><a href="#schedule" class="js_onPageLink">schedule</a></li>
+					<li><a href="#booths" class="js_onPageLink">booths</a></li>
+					<li><a href="#geninfo" class="js_onPageLink">Info.</a></li>
+					<li><a href="#links" class="js_onPageLink">links</a></li>
 					
 				</ul>
 			</div><!--END STICKYNAV-->
 		</nav>
-						<!--COUNTDOWN MARKUP -->
+						<!--COUNTDOWN MARKUP --><!-- REMOVED AFTER EVENT DATE -->
 						<div id="defaultCountdown"></div>
 						<!--END COUNTDOWN -->
 		<header>
@@ -63,18 +97,143 @@
 				<h1 id="bunk">Bunkasai</h1>		
 			</hgroup>
 
-				<h4 id="tagline">Raising money for the victims of typhoon Haiyan</h4>
-						
-					<div id="whenwhere">
-						<h3>March 8th, 2014</h3>
-						<h4>2pm - 6pm</h4>
-						<h4 id="free">FREE admission</h4>
-						<h5>Cupertino High School</br> 10100 Finch Avenue</br> Cupertino CA</h5>
-					</div>		
+			<h4 id="tagline">Raising money for the victims of typhoon Haiyan</h4>
+					
+				<div id="whenwhere">
+					<h3>March 8th, 2014</h3>
+					<h4>2pm - 6pm</h4>
+					<h4 id="free">FREE admission</h4>
+					<h5>Cupertino High School<br> 10100 Finch Avenue<br> Cupertino CA</h5>
+				</div>		
 		</header>
 			</div>
 	<div id="maincontent">
 		<section id="updates">
+			<h2>Newsfeed</h2>
+			<h4>3.05.14</h4>
+				<div class="news">
+					<h3>Bunkasai is this Saturday!</h3>
+					<p>Don't forget, Bunkasai is in three days! Mark your calendars, and invite your friends! Let's all get in the festive spirit.</p>
+					<div class="newsimg">
+						<img src="images/matsuri.jpg" alt="Matsuri"/>
+					</div>
+				</div>
+			<h4>2.27.14</h4>
+				<div class="news">
+					<h3>The Human Spirit is Waterproof</h3>
+					<p>Although there is poor weather in the days leading up to Bunkasai, as of now, there are no signs of rain for March 8th. However, if the weather turns for the worse, Bunkasai will continue, rain or shine! Temperatures are expected to between 46-65 on the 8th, so please come dressed appropriately to have a good time!</p>
+					<div class="newsimg">
+								<img src="images/rain1.jpg" alt="Rain Picture"/>
+							</div>
+					<h3>Clothing Donation</h3>
+					<p>FASA will be accepting donations of used clothing to as part of another fundraiser to raise money to the Philippines. There will be a donation box for clothing next to the ticket booth where you can drop off clothes. Any clothing is ok as long as it is gently used.</p>
+					<h3>Online Donation</h3>
+					<p>If you cannot not make it to Bunkasai or want to donate directly, we now have a PayPal donation link! Click <a href="https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=CIRLiRcqOGVOJXpSc7rQ3NR7cPJtkDZT7nEPlkp2dd0eR7dclVzt_40MPj0&dispatch=5885d80a13c0db1f8e263663d3faee8d7ff5e1e81f2ed97dd1e90bd72966c40c">here</a> to donate.</p>
+				</div>
+
+			<h4>2.26.14</h4>
+				<div class="news">
+					<h3>More Paint Days</h3>
+					<p>Despite the bad weather, everyone worked hard inside the Japanese classroom creating props and posters for Haunted House and Maid Cafe. Everyone is working hard and getting into the festive spirit!</p>
+
+					<div id='_cincopa_widget_a1edf3aa-49de-480e-83a7-260523137757'><img src='http://www.cincopa.com/media-platform/runtime/loading.gif' style='border:0;'/><a href='http://www.cincopa.com/media-platform/wordpress-plugin.aspx'><img alt='WordPress plugin' style='border:0;' border=0 src='http://www.cincopa.com/media-platform/runtime/cincopaicons.gif' /></a></div>
+					<script src='http://www.cincopa.com/media-platform/runtime/libasync.js' type='text/javascript'></script>
+					<script type='text/javascript'>
+					cp_load_widget('A4FAbfLWsv3g', '_cincopa_widget_a1edf3aa-49de-480e-83a7-260523137757');
+					</script>
+					<noscript>Click <a href='http://www.cincopa.com/media-platform/view.aspx?fid=A4FAbfLWsv3g'>here</a> to open the gallery.<br>
+					Powered by Cincopa <a href='http://www.cincopa.com/media-platform'>Media Platform</a> for your website and Cincopa MediaSend for <a href='http://www.cincopa.com/mediasend/start.aspx'>file transfer</a>.
+					</noscript>	
+					<br>
+	<!--				<div class="newsimg">
+						<img src="images/paint6.jpg" alt="paint picture 6"/>
+					</div>
+					<div class="newsimg">
+						<img src="images/paint7.jpg" alt="paint picture 7"/>
+					</div>
+					<div class="newsimg">
+						<img src="images/paint8.jpg" alt="paint picture 8"/>
+					</div>
+					<div class="newsimg">
+						<img src="images/paint9.jpg" alt="paint picture 9"/>
+					</div>
+					<div class="newsimg">
+						<img src="images/paint10.jpg" alt="paint picture 10"/>
+					</div>
+					<div class="newsimg">
+						<img src="images/paint11.jpg" alt="paint picture 11"/>
+					</div>
+					<div class="newsimg">
+						<img src="images/paint12.jpg" alt="paint picture 12"/>
+					</div>
+					<div class="newsimg">
+						<img src="images/paint13.jpg" alt="paint picture 13"/>
+					</div>
+					<div class="newsimg">
+						<img src="images/paint14.jpg" alt="paint picture 14"/>
+					</div>
+					<div class="newsimg">
+						<img src="images/paint15.jpg" alt="paint picture 15"/>
+					</div>
+					<div class="newsimg">
+						<img src="images/paint16.jpg" alt="paint picture 16"/>
+					</div>
+					<div class="newsimg">
+						<img src="images/paint17.jpg" alt="paint picture 17"/>
+					</div>
+-->				</div>
+
+			<h4>2.25.14</h4>
+				<div class="news">
+					<h3><a href="maidcafemenu.html">Maid Cafe Menu</a></h3>
+						<p>Maid Cafe Menu has been finalized! Drop by and have a parfait or homemade macarons! Remember, Maid Cafe will be using cash, so when buying tickets, leave some money aside for Maid Cafe! Quickly browse our menu below, or click <a href="maidcafemenu.html">here</a> to see it in all its splendor.</p>
+						<h4><a href="maidcafemenu.html">Maid Cafe Menu</a></h4>
+						<div class="newsimg">
+						<a href="maidcafemenu.html"><img src="images/maidcafemenu.jpg" alt="maid cafe menu image"/></a>
+						</div>
+				</div>
+
+			<h4>2.20.14</h4>
+				<div class="news">
+					<h3>Lanyards</h3>
+						<p>To commemorate for this year’s Bunkasai, we will be selling lanyards next to the ticket booth during the festival. Lanyards are $5 dollars each and are in limited supply, so don’t forget to snag one once you purchase your tickets!<p>
+							<div class="newsimg">
+								<img src="images/lanyard.png" alt="lanyard image"/>
+							</div>
+				</div>	
+					
+			<h4>02.12.14</h4>
+				<div class="news">
+					<h3>Paint Day</h3>
+						<p>First paint day! Students came out to paint and work on props for the Haunted House, work is progress!</p>
+
+							<div id='_cincopa_widget_e8971b3a-a42c-4b95-aa6d-2dddecb12c10'><img src='http://www.cincopa.com/media-platform/runtime/loading.gif' style='border:0;'/><a href='http://www.cincopa.com/media-platform/wordpress-plugin.aspx'><img alt='WordPress plugin' style='border:0;' border=0 src='http://www.cincopa.com/media-platform/runtime/cincopaicons.gif' /></a></div>
+						<script src='http://www.cincopa.com/media-platform/runtime/libasync.js' type='text/javascript'></script>
+						<script type='text/javascript'>
+						cp_load_widget('AELAPfres_Nl', '_cincopa_widget_e8971b3a-a42c-4b95-aa6d-2dddecb12c10');
+						</script>
+						<noscript>Click <a href='http://www.cincopa.com/media-platform/view.aspx?fid=AELAPfres_Nl'>here</a> to open the gallery.<br>
+						Powered by Cincopa <a href='http://www.cincopa.com/media-platform'>Media Platform</a> for your website and Cincopa MediaSend for <a href='http://www.cincopa.com/mediasend/start.aspx'>file transfer</a>.
+						</noscript>
+						<br>
+
+<!--						<div class="newsimg">
+								<img src="images/paint1.jpg" alt="paint picture 1"/>
+							</div>
+							<div class="newsimg">
+								<img src="images/paint2.jpg" alt="paint picture 2"/>
+							</div>
+							<div class="newsimg">
+								<img src="images/paint3.jpg" alt="paint picture 3"/>
+							</div>
+							<div class="newsimg">
+								<img src="images/paint4.jpg" alt="paint picture 4"/>
+							</div>
+							<div class="newsimg">
+								<img src="images/paint5.jpg" alt="paint picture 5"/>
+							</div>
+-->				</div>
+
 			<h4>02.11.14</h4> 
 				<div class="news">
 					<h3>Website domain registered!</h3>
@@ -86,7 +245,9 @@
 						<p>CHS sophomores, you can now recieve core hours for volunteering to work at the event. Make sure to speak to your core teacher and/or JNHS officers for more information.</p>
 				</div>
 		</section>
+	
 		<section id="about">
+			<h2>About Bunkasai</h2>
 			<h4>What is a Bunkasai?</h4>
 				<p>A bunkasai is a Japanese cultural festival often put on by schools in Japan open to the community. Our bunkasai is a collection of games, food, performances and other activities all put on by students. Here in Cupertino this festival gives us an opportunity to raise support for those in need. See the plans for <a href="#bunkasai-2014">Bunkasai 2014</a> and past success at <a href="#bunkasai-2011">Bunkasai 2011</a>.</p>
 			<h4 id="bunkasai-2014">Bunkasai 2014</h4>
@@ -94,26 +255,53 @@
 			<h4 id="bunkasai-2011">Bunkasai 2011</h4>
 				<p>Three years ago, when a 9.0 earthquake and subsequent tsunami ravaged Northern Japan, Cupertino High School JNHS collaborated with the other schools in the district to host a Bunkasai. The 2011 Bunkasai raised approximately 5000 dollars; all of which went directly to the JCCCNC fund for tsunami relief. People of all ages attended this event to make it successful. They enjoying Japanese food &amp; drinks, games, a haunted house, a maid cafe, and guest performances, all while supporting  tsunami relief.</p>			
 			<div id="student-run">
-				<img src="/images/maid1.jpg"/>
+				<img src="/images/maid1.jpg" alt="Maid Cafe 2011"/>
 				<h5>A festival run by students</h5>
 			</div>
 			<div id="behind">
-				<img src="/images/students1.jpg">
+				<img src="/images/students1.jpg" alt="Students working bunkasai 2011">
 				<h5>behind the scenes</h5>
 			</div>
 			<div id="infront">
-				<img src="/images/hh1.jpg"/>
+				<img src="/images/hh1.jpg" alt="Bunkasai Haunted House 2011"/>
 				<h5>and in the scenes</h5>
 			</div>
 		</section>
+	
 		<section id="schedule">
-			<h4>No Schedule posted yet. Check back soon</h4>
+			<h2>Schedule</h2>
+			<ul>
+				<li><span class="mono">2:00-2:15</span>  &nbsp;&nbsp;&nbsp;Koto &amp; Piano</li> 
+				<li><span class="mono">3:00-3:20</span>  &nbsp;&nbsp;&nbsp;Stanford Taiko</li>
+				<li><span class="mono">3:30-4:30</span>  &nbsp;&nbsp;&nbsp;-Break-</li>
+				<li><span class="mono">4:30-4:40</span>  &nbsp;&nbsp;&nbsp;CHS Band Drum Line</li>
+				<li><span class="mono">4:45-4:55</span>  &nbsp;&nbsp;&nbsp;CHS: The Who's Tommy Preview</li>
+				<li><span class="mono">5:00-5:10</span>  &nbsp;&nbsp;&nbsp;CHS Hip Hop Club</li>
+				<li><span class="mono">5:15-5:30</span>  &nbsp;&nbsp;&nbsp;Homestead Korean Dance</li>
+			</ul>
+			<br>
+			<br>
+			<h4>See Descriptions of performances below:</h4>
+			<br>
+			<br>
+			<h3>Performance Descriptions</h3>
+				<br>
+			<p><strong>Drumline</strong>: Drumline is the marching percussion aspect of a marching band. We provide the marching band with a beat, the tempo, for the performance. The line consist of Bass drums in five different tones, they also consist of high tension snare drums as well as tenor drums. We will be performing some of our routine warm ups, cadences as well as excerpts of past shows.</p>
+				<br>
+			<p><strong>Koto &amp; Piano</strong>: The Koto is a traditional Japanese instrument with 13 strings strung over movable bridges that can be adjusted to change the pitch. Chie Chang will be playing the Koto and Yuka Suzuki will be playing the piano.</p>
+				<br>
+			<p><strong>Taiko</strong>: Stanford Taiko is a collegiate performing ensemble devoted to bringing the awareness of taiko to the greater community. Composed of fifteen to twenty Stanford students, it is an entirely student run group under the guidance of the Department of Music and faculty advisors Steve Sano and Linda Uyechi.</p>
+				<br>	
+			<p><strong>Kpop Dance Group</strong>: Krew, Homestead High's student-led dance crew, is united with one word, k-pop! Within less than a year we performed in a rally and successfully pulled out a flashmob consisting 40+ enthusiastic dancers!</p>
+				<br>
+			<p><strong>Who’s Tommy</strong>: A quick preview of Cupertino High School’s annual Spring Musical which will be performed on March 28 29 and April 4 5!</p>
 		</section>
+	
 		<section id="booths">
+			<h2>Booths</h2>
 			<h3>Activities for all ages!</h3>
-			<p class="disclaimer">(tickets $1 each)</p>
 			<h4>Games</h4>
-				<p>Enjoy a variety of fun cultural games like Suika Smash and Yo-yo Tsuri, get active in Human Whack-a-Mole, get competitive in the Arcade with video games and more! Collect stamps for prizes and a chance to enter the raffle!</p>
+				<p>Enjoy a variety of fun cultural games like Suika Smash and Yo-yo Tsuri, get active in Human Whack-a-Mole, get competitive in the Arcade with video games and more! Collect tickets for prizes and a chance to enter the raffle!</p>
 
 			<h4>Stamp Rally</h4>
 				<p>Scavenge around the school to collect stamps on your stamp booklet!</p>
@@ -121,8 +309,8 @@
 			<h4>Photo Booth</h4>
 				<p>Cute and silly cut out boards are available to everyone! Ask Tino’s Photography Club members to take great quality photos, which will be available on the Bunkasai Website.</p>
 
-			<h4>Raffle</h4>
-				<p>Use the stamps collected from games to enter the raffle for exciting prizes!</p>
+			<h4>Silent Auction</h4>
+				<p>Use the stamps collected from games to bid on exciting prizes!</p>
 
 			<h4>Haunted House (Obakeyashiki)</h4>
 				<p>Enjoy a good scare at this spooky maze filled with ghosts and ghouls from Japanese myth!</p>
@@ -131,14 +319,33 @@
 				<p>Takoyaki? Okonomiyaki? More traditional Japanese food? Don’t like Japanese food? We’ve got more! Stuff your tummy with these tasty treats!</p>  
 
 			<h4>Performances</h4>
-				<p>Come join the fun with local groups like Stanford Taiko (traditional Japanese drumming) and dj’s like Marcus D. Or watch students from local schools show off their talents in a relaxing cafe. All performances are free so don’t miss out!<p>
+				<p>Come join the fun with local groups like Stanford Taiko (traditional Japanese drumming). Or watch students from local schools show off their talents in a relaxing cafe. All performances are free so don’t miss out!<p>
 
-			<h4>Lots of booths. More descriptions and lists coming soon</h4>
+			<h4>Maid Cafe</h4>
+				<p>Come enjoy delicious dessert items served to you by maids and butlers. Sit back, relax, and enjoy being treated like a prince or princess as you feast on various sweets! Check out the <a href="maidcafemenu.html">Maid Cafe Menu!</a></p>
+
 		</section>
-		<section id="sponsors">
-			<h4>Thank you to our sponsors:</h4>
+	
+		<section id="geninfo">
+			<h2>General Information</h2>
+			<h4>Admission</h4>
+				<p>Admission is free. Performances and games are kid friendly, so bring the entire family!</p>
+			<h4>Food &amp; Games</h4>
+				<p>Food and games will be available through the purchase of tickets. Tickets will cost $1 each, and can be used to purchase food and play games at a variety of booths.</p>
+				<br>
+				<p><strong>All profits will go to help the victims of Typhoon Haiyan.</strong></p>
+			<h4>Performances</h4>
+				<p>While food and games will cost tickets, all performances will be free of charge, so come enjoy the sights and sounds of your local performers.</p>
+				<br>
+			<h4>Activities Map</h4>
+				<a href="images/bunkasaimap.jpg" target="blank"><img src="images/bunkasaimap.jpg" alt="Bunkasai Activities Map"/></a>
+			<h4>Parking</h4>
+				<a href="https://cupertino.schoolloop.com/uimg/image/1211914114116/1123558358016/1344704563433_w900.jpg" target="blank"><img src="images/chs_parking.jpg" alt="CHS Parking Map"/></a>
+
 		</section>
+	
 		<section id="links">
+			<h2>Links</h2>
 			<h4>This would not have been possible without the collaborative group of students from the following schools. Great job everyone!</h4>
 				<ul>
 					<li><a href="http://lhs.fuhsd.org">Lynbrook High School</a></li>
@@ -153,7 +360,21 @@
 				<ul>
 					<li><a href="http://www.directrelief.org/tag/typhoon-haiyan">Direct Relief for Typhoon Haiyan</a></li>
 					<li><a href="http://www.unocha.org/crisis/typhoonhaiyan">Information on Typhoon Haiyan</a></li>
+					<li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=P2XQV5SRDNEGW">Donate via PayPal</a></li>
+						<br>
+							<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+								<input type="hidden" name="cmd" value="_s-xclick">
+								<input type="hidden" name="hosted_button_id" value="P2XQV5SRDNEGW">
+								<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+							<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+							</form>
 				</ul>
+			<h4>Thank you sponsors!</h4>
+				<ul>
+					<li><a href="http://www.elephantbar.com/location/cupertino">Elephant Bar</a></li>
+					<li><a href="http://walkinthese.com">Walk in These</a></li>
+				</ul>
+
 		</section>
 	</div><!--Main content-->
 	<footer>
@@ -165,11 +386,13 @@
 	var slide = document.getElementById('main');
 	var anywhere = document.getElementsByTagName('body');
 
+
 	button.onclick = function() {
 		if(slider.style.left == "-60%" && slide.style.left == "0px") {
 			slider.style.left = "0px";
 			slide.style.left = "60%";
 			button.style.left = "60%";
+			e.stopPropagation;
 
 		} else {
 			slider.style.left = "-60%";
@@ -181,6 +404,7 @@
 	anywhere.onclick = function() {
 		if(slider.style.left !== "-60%") {
 			slider.style.left = "-60%";
+			event.stopPropagation;
 		}
 	};
 	</script>

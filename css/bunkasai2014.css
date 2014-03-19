@@ -69,6 +69,9 @@ a {
 a:hover {
     color: rgba(255, 201, 254, 1);
 }
+a:focus {
+    outline: solid 1px #fff;
+}
 
 /* change colours to suit your needs */
 ins {
@@ -138,6 +141,9 @@ input, select {
 @font-face {
     font-family: SofiaPL; src: url(/fonts/SofiaProLight-webfont.ttf);
 }
+@font-face {
+    font-family: NotCourierSans; src: url(/fonts/NotCourierSans.otf);
+}
 /*#############################################################################
 ###############################################################################
                 Mobile/Small Screen Style
@@ -149,6 +155,7 @@ input, select {
     @media screen and (min-width: 300px) {
     body {
          border-top: 7px solid rgba(255, 201, 254, .75);
+         color: #212121;
     }
     #main {
         position: relative;
@@ -167,6 +174,10 @@ input, select {
         background-position: 50% 17%;
         padding-top: 5rem;
         font-family: JosefinSans-Lig;
+    }
+    header:before {
+        content: "";
+        back
     }
     #slidebutton {
         position: fixed;
@@ -310,12 +321,37 @@ input, select {
         border-radius: 5px;
         padding: .5rem .25rem;
         margin-top: .25rem;
+        margin-bottom: 4rem;
+    }
+    #updates h2 {
+        font-family: Lato;
+    }
+    #updates p {
+        padding-bottom: 2rem;
+    }
+    #updates h4 {
+        padding-bottom: .25rem;
+    }
+    .newsimg {
+        text-align: center;
+        display: inline-block;
+    }
+    .newsimg img {
+        border: solid #212121 3px;
+        width: 90%;
+        margin: .25rem auto;
+        margin-bottom: 1rem;
     }
 /*****************ABOUT SECTION*******************/
     section {
         padding: 0 .25rem;
         padding-top: 5rem;
         padding-bottom: 3rem;
+    }
+    section h2 {
+        font-family: Lato-Reg;
+        text-align: center;
+        padding-bottom: 1rem;
     }
     #about {
         background: #fff;
@@ -333,7 +369,7 @@ input, select {
         padding-bottom: .25rem;
     }
     #about h4 {
-        padding-top: 5rem;
+        padding-top: 0rem;
         padding-bottom: .5rem;
         padding-left: 1rem;
     }
@@ -344,53 +380,74 @@ input, select {
         width: 100%;
     }
 /***************************SCHEDULE**************************/
-#schedule {
-    height: 50rem;
-}
-#schedule h4:first-child {
-    padding-top: 7rem;
-}
+    #schedule {
+        height:;
+    }
+    #schedule h4:first-child {
+        padding-top: 7rem;
+    }
+    .mono {
+        font-family: NotCourierSans;
+    }
+    #schedule ul {
+        list-style: none;
+    }
+    #schedule ul li {
+        font-size: 1rem;
+        margin: 1rem 0;
+    }
+     strong {
+        color: #000;
+        font-weight: bolder;
+        font-size: 1.25rem;
+    }
 /************************BOOTHS**************************/
-.disclaimer {
-    font-size: .75rem;
-    display: inline;
-    padding-left: 1rem;
-}
-#booths h4:first-child {
-    padding-top: 3rem;
-}
-/************************SPONSORS**************************/
-#sponsors {
-    height: 50rem;
-}
-#sponsors h4:first-child {
-    padding-top: 7rem;
-}
+    .disclaimer {
+        font-size: .75rem;
+        display: inline;
+        padding-left: 1rem;
+    }
+    #booths h4:first-child {
+        padding-top: 3rem;
+    }
+/************************GENINFO**************************/
+    #geninfo {
+        height:;
+    }
+    #geninfo h4:first-child {
+        padding-top: 3rem;
+    }
+    #geninfo img {
+        width: 90%;
+    }
+    #geninfo h4:nth-of-type(n+4) {
+        margin-bottom: 1rem;
+    }
 /************************LINKS**************************/
-#links {
-    height: 50rem;
-}
-#links h4:first-child {
-    padding-top: 4rem;
-    line-height: 1.25rem;
-}
-#links h4 {
-    padding-top: 3rem;
-    padding-bottom: .75rem;
-}
-#links ul {
-    list-style: none;
-    padding-left: 1rem;
-}
-#links ul li {
-    line-height: 1.25rem;
-}
+    #links {
+        height: 50rem;
+    }
+    #links h4:first-child {
+        padding-top: 0rem;
+        line-height: 1.25rem;
+    }
+    #links h4 {
+        padding-top: 0rem;
+        padding-bottom: .75rem;
+    }
+    #links ul {
+        list-style: none;
+        padding-left: 1rem;
+    }
+    #links ul li {
+        line-height: 1.25rem;
+    }
 /**************FOOTER***************/
-footer {
-    text-transform: uppercase;
-    text-align: center;
-    font-size: .75rem;
-}
+    footer {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: .75rem;
+    }
 
 /*#############################################################################
 ###############################################################################
@@ -409,11 +466,17 @@ footer {
     #slidebutton {
         display: none;
     }
+    p {
+        max-width: 500px;
+        margin-left: 2rem;
+        margin-top: 1rem;
+    }
     #slider {
         left: 0px !important;
         margin: auto;
     }
     header {
+        background-image: url(/images/sakurasun50.png);
         background-size: 13%;
         margin-top: 10rem;
         background-position: 83.5% 75%;
@@ -456,15 +519,25 @@ footer {
         margin: auto;
     }
     #slider li {
-        
         display: inline-block;
-        width: 16%;
-        text-align: center;
-        border-left: 1px solid rgba(255, 201, 254, 1);
+        width: 12%;
+        text-align: right;
+        /*border-left: 1px solid rgba(255, 201, 254, 1);*/
         padding: 1.25rem 0;
+        border: none;
+        line-height: 1.5rem;
+        vertical-align: middle;
     }
     #slider li:first-child {
-        border-left: none;
+        text-align: left;
+    }
+    #slider li a {
+        transition: .25s;
+    }
+    #slider li a:hover {
+        font-size: 1.25rem;
+        color: #ED5FEB;
+        font-weight: bolder;
     }
     #defaultCountdown {
         position: relative;
@@ -485,6 +558,10 @@ footer {
     }
     section {
         padding: 0 1rem;
+        padding-top: 5rem;
+    }
+    section h2 {
+        text-align: left;
         padding-top: 5rem;
     }
     #maincontent {
@@ -518,6 +595,10 @@ footer {
         display: inline-block;
         margin-left: 1rem !important;
     }
+/*****************SCHEDULE SECTION*******************/
+    #schedule ul li {
+        font-size: 1.5rem;
+    }
 /*****************BOOTHS SECTION*******************/
     .disclaimer {
         display: inline-block;
@@ -525,7 +606,10 @@ footer {
     }
     #booths h3:first-child {
         display: inline-block;
-        padding-top: 3rem;
+        padding-top: 0rem;
+    }
+    #booths a {
+        text-decoration: underline;
     }
 }
 /************************************
@@ -533,6 +617,7 @@ footer {
 ************************************/
 @media screen and (min-width: 1100px) {
     header {
+        background-image: url(/images/sakurasun26.png);
         background-size: 27%;
         margin-top: 12rem;
         background-position: center;
