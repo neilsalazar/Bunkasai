@@ -384,29 +384,30 @@
 	var slider = document.getElementById('slider');
 	var button = document.getElementById('slidebutton');
 	var slide = document.getElementById('main');
-	var anywhere = document.getElementsByTagName('body');
 
+	$('body').on('click', function() {
 
-	button.onclick = function() {
+		if(slider.style.left != "-60%") {
+			slider.style.left = "-60%";
+			slide.style.left = "0px";
+			button.style.left = "0px"
+		};
+	});
+
+	button.onclick = function(event) {
+		
+		event.stopPropagation();
 		if(slider.style.left == "-60%" && slide.style.left == "0px") {
 			slider.style.left = "0px";
 			slide.style.left = "60%";
 			button.style.left = "60%";
-			e.stopPropagation;
-
 		} else {
 			slider.style.left = "-60%";
 			slide.style.left = "0px";
 			button.style.left = "0px"
-
 		}
 	};
-	anywhere.onclick = function() {
-		if(slider.style.left !== "-60%") {
-			slider.style.left = "-60%";
-			event.stopPropagation;
-		}
-	};
+	
 	</script>
 </body>
 </html>
